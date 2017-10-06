@@ -1,2 +1,7 @@
 # mobilelearning
-Hi
+Hi meine Kameraden.
+Kern
+Mazzolini - PL
+Schwartz
+Wintersperger
+Zhanel
