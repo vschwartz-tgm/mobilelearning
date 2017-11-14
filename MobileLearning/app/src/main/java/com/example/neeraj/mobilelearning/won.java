@@ -18,7 +18,7 @@ public class won extends Activity {
         tv = (TextView) findViewById(R.id.score);
         Bundle b = getIntent().getExtras();
         int y = b.getInt("score")-1;
-        tv.setText("FINAL SCORE:" + y);
+        tv.setText("Finaler Punktestand:" + y);
     }
 
     @Override

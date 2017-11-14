@@ -23,7 +23,7 @@ public class ResultActivity extends Activity {
         if (Wort2Zahl.msg!=1) {
             textResult.setText("Falsche Antwort!! "+ /*Your points are*/"Dein Punktestand:" + " " + score);
         }else {
-            textResult.setText("Time out!! Your points are " + " " + score);
+            textResult.setText("Zeit abgelaufen!! Dein Punktestand:" + " " + score);
         }
 
     }
