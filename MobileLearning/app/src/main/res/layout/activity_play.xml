@@ -29,33 +29,35 @@
             android:id="@+id/word_to_num"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_alignBottom="@+id/word_to_num_txt"
-            android:layout_marginBottom="28dp"
-            android:layout_toEndOf="@+id/settings"
+            android:layout_above="@+id/markezahl"
+            android:layout_marginBottom="52dp"
+            android:layout_marginStart="70dp"
+            android:layout_toEndOf="@+id/space"
             android:background="@drawable/wort_zu_zahl" />
 
         <Button
             android:id="@+id/perle_zu_zahl"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="79dp"
-            android:layout_toEndOf="@+id/markezahl"
+            android:layout_toRightOf="@id/word_to_num"
+            android:layout_alignBottom="@id/word_to_num"
+            android:layout_marginLeft="52dp"
             android:background="@drawable/perle_zu_zahl" />
 
         <Button
             android:id="@+id/word_to_num_txt"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_below="@+id/info"
-            android:layout_marginTop="58dp"
-            android:layout_toEndOf="@+id/markezahl"
+            android:layout_toRightOf="@id/markezahl"
+            android:layout_marginLeft="52dp"
+            android:layout_alignBottom="@id/markezahl"
             android:background="@drawable/zahl_zu_text" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="160dp"
             android:layout_height="160dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/logo" />
 
@@ -63,9 +65,9 @@
             android:id="@+id/markezahl"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_alignBottom="@+id/perle_zu_zahl"
-            android:layout_marginBottom="43dp"
-            android:layout_toEndOf="@+id/space"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/word_to_num"
+            android:layout_marginBottom="120dp"
             android:background="@drawable/marke_zu_zahl" />
 
         <Space
@@ -78,6 +80,8 @@
             android:id="@+id/settings"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             tools:background="@drawable/setting" />
 
         <Button
