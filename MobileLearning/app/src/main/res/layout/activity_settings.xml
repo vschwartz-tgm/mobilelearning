@@ -31,11 +31,55 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="90dp"
             android:text="@string/sound"
-            android:textColor="@color/colorAccent"
-            android:textSize="50sp" />
+            android:textColor="@color/black_overlay"
+            android:textSize="20sp" />
+<!--
+        <Spinner
+            android:id="@+id/spinnerStart"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/switch1"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="33dp"
+            android:layout_toEndOf="@+id/Zahlenbereich1"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/Zahlenbereich1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spinnerStart"
+            android:layout_alignStart="@+id/switch1"
+            android:layout_alignTop="@+id/spinnerStart"
+            android:text="Zahlenbereich"
+            android:textColor="@color/black_overlay"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/Bindestrich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spinnerStart"
+            android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/spinnerStart"
+            android:text="-"
+            android:textColor="@color/black_overlay"
+            android:textSize="40sp" />
+
+        <Spinner
+            android:id="@+id/spinnerEnd"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/Bindestrich"
+            android:layout_alignParentEnd="true"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+-->
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
