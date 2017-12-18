@@ -11,12 +11,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:clipToPadding="false"
         android:gravity="start"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +33,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="182dp"
             android:text="Zahl Eingeben"
-            android:textSize="36sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
@@ -50,11 +49,12 @@
             tools:text="123456" />
 
         <TableLayout
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/zahl_eingabe"
-            android:layout_marginTop="350dp">
+            android:layout_marginTop="200dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -68,8 +68,8 @@
 
                 <Button
                     android:id="@+id/n1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:paddingRight="10dp"
                     android:text="1"
@@ -77,8 +77,8 @@
 
                 <Button
                     android:id="@+id/n2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@android:color/holo_blue_bright"
@@ -87,8 +87,8 @@
 
                 <Button
                     android:id="@+id/n3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:text="3"
                     android:textSize="30sp" />
@@ -102,16 +102,16 @@
 
                 <Button
                     android:id="@+id/n4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:text="4"
                     android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/n5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@android:color/holo_blue_bright"
@@ -120,8 +120,8 @@
 
                 <Button
                     android:id="@+id/n6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:fadingEdge="none|horizontal|vertical"
                     android:text="6"
@@ -137,16 +137,16 @@
 
                 <Button
                     android:id="@+id/n7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:text="7"
                     android:textSize="30sp" />
 
                 <Button
                     android:id="@+id/n8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@android:color/holo_blue_bright"
@@ -155,8 +155,8 @@
 
                 <Button
                     android:id="@+id/n9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_blue_bright"
                     android:elevation="0dp"
                     android:text="9"
@@ -173,16 +173,16 @@
 
                 <Button
                     android:id="@+id/ndel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_red_light"
                     android:text="delete"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
                 <Button
                     android:id="@+id/n0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:background="@android:color/holo_blue_bright"
@@ -191,11 +191,11 @@
 
                 <Button
                     android:id="@+id/nok"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
                     android:background="@android:color/holo_green_light"
                     android:text="Ok"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
 
             </TableRow>
@@ -208,6 +208,14 @@
 
             </TableRow>
         </TableLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
