@@ -93,5 +93,207 @@
             android:layout_toEndOf="@+id/zehner"
             app:srcCompat="@drawable/einser1" />
 
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/tausenderb1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/tausender"
+            android:layout_below="@+id/tausender"
+            android:layout_marginTop="17dp" />
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/hunderterb1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/hunderter"
+            android:layout_below="@+id/hunderter"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/zehnerb1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/zehner"
+            android:layout_below="@+id/zehner"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/einserb1"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/einser"
+            android:layout_below="@+id/einser"
+            android:layout_marginTop="17dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/tausenderchoice1"
+            android:layout_alignTop="@+id/tausenderb1"
+            android:layout_alignStart="@+id/tausenderb1"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:layout_alignTop="@+id/hunderterb1"
+            android:layout_alignStart="@+id/hunderterb1"
+            android:id="@+id/hunderterchoice1"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/zehnerchoice1"
+            android:layout_alignTop="@+id/zehnerb1"
+            android:layout_alignStart="@+id/zehnerb1"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/einserchoice1"
+            android:layout_alignTop="@+id/einserb1"
+            android:layout_alignStart="@+id/einserb1"
+            android:layout_height="55dp" />
+
+        <ImageView
+        app:srcCompat="@android:color/background_light"
+        android:id="@+id/tausenderb2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignStart="@+id/tausenderb1"
+        android:layout_below="@+id/tausenderb1"
+        android:layout_marginTop="17dp" />
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/hunderterb2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/hunderterb1"
+            android:layout_below="@+id/hunderterb1"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/zehnerb2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/zehnerb1"
+            android:layout_below="@+id/zehnerb1"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/einserb2"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/einserb1"
+            android:layout_below="@+id/einserb1"
+            android:layout_marginTop="17dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/tausenderchoice2"
+            android:layout_alignTop="@+id/tausenderb2"
+            android:layout_alignStart="@+id/tausenderb2"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/hunderterchoice2"
+            android:layout_alignTop="@+id/hunderterb2"
+            android:layout_alignStart="@+id/hunderterb2"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/zehnerchoice2"
+            android:layout_alignTop="@+id/zehnerb2"
+            android:layout_alignStart="@+id/zehnerb2"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/einserchoice2"
+            android:layout_alignTop="@+id/einserb2"
+            android:layout_alignStart="@+id/einserb2"
+            android:layout_height="55dp" />
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/tausenderb3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/tausenderb2"
+            android:layout_below="@+id/tausenderb2"
+            android:layout_marginTop="17dp" />
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/hunderterb3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/hunderterb2"
+            android:layout_below="@+id/hunderterb2"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/zehnerb3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/zehnerb2"
+            android:layout_below="@+id/zehnerb2"
+            android:layout_marginTop="17dp"/>
+
+        <ImageView
+            app:srcCompat="@android:color/background_light"
+            android:id="@+id/einserb3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/einserb2"
+            android:layout_below="@+id/einserb2"
+            android:layout_marginTop="17dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/tausenderchoice3"
+            android:layout_alignTop="@+id/tausenderb3"
+            android:layout_alignStart="@+id/tausenderb3"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/hunderterchoice3"
+            android:layout_alignTop="@+id/hunderterb3"
+            android:layout_alignStart="@+id/hunderterb3"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/zehnerchoice3"
+            android:layout_alignTop="@+id/zehnerb3"
+            android:layout_alignStart="@+id/zehnerb3"
+            android:layout_height="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="55dp"
+            android:id="@+id/einserchoice3"
+            android:layout_alignTop="@+id/einserb3"
+            android:layout_alignStart="@+id/einserb3"
+            android:layout_height="55dp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
