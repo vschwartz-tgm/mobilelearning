@@ -45,7 +45,7 @@ public class PlayActivity extends AppCompatActivity {
         });
 
         // Button, welcher für das Spiel TextZuSpeech zustädig ist.
-        textzuspeech = (Button)findViewById(R.id.textspeech);
+        //textzuspeech = (Button)findViewById(R.id.textspeech);
         textzuspeech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
