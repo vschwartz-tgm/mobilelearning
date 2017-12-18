@@ -31,8 +31,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="1dp"
-            android:text="Marken zur Zahl"
-            android:textSize="24sp"
+            android:text="Perle zu Zahl"
+            android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
@@ -41,18 +41,36 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/zahl_wort"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="25dp"
             android:textSize="44sp"
             android:id="@+id/cnumber" />
+
+        <Button
+            android:text="zurücksetzen"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@+id/cnumber"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@+id/cnumber"
+            android:id="@+id/rbutton" />
+
+        <ImageView
+            android:id="@+id/tausender"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/hunderter"
+            android:layout_alignEnd="@+id/zahl_wort"
+            app:srcCompat="@drawable/tausender1" />
 
         <ImageView
             android:id="@+id/einser"
             android:layout_width="50dp"
-
             android:layout_height="50dp"
             android:layout_below="@+id/zahl_wort"
             android:layout_marginEnd="13dp"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="100dp"
             android:layout_toStartOf="@+id/zahl_wort"
             app:srcCompat="@drawable/einser1" />
 
@@ -73,21 +91,13 @@
             app:srcCompat="@drawable/hunderter1" />
 
         <ImageView
-            android:id="@+id/tausender"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignBottom="@+id/hunderter"
-            android:layout_alignEnd="@+id/zahl_wort"
-            app:srcCompat="@drawable/tausender" />
-
-        <ImageView
-            app:srcCompat="@android:color/background_light"
-            android:layout_below="@+id/cnumber"
-            android:layout_alignStart="@+id/einser"
-            android:layout_marginTop="21dp"
             android:id="@+id/tausenderb1"
             android:layout_width="55dp"
-            android:layout_height="55dp" />
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/einser"
+            android:layout_below="@+id/einser"
+            android:layout_marginTop="17dp"
+            app:srcCompat="@android:color/background_light" />
 
         <ImageView
             app:srcCompat="@android:color/background_light"
@@ -143,18 +153,11 @@
 
             android:layout_width="55dp"
             android:id="@+id/tausenderchoice1"
+            android:layout_marginTop="40dp"
             android:layout_alignTop="@+id/tausenderb1"
             android:layout_alignStart="@+id/tausenderb1"
             android:layout_height="55dp" />
 
-        <TextView
-            android:text="Not yet"
-            android:layout_alignTop="@+id/cnumber"
-            android:layout_alignStart="@+id/einserb1"
-            android:layout_marginTop="15dp"
-            android:id="@+id/winner"
-            android:layout_width="80dp"
-            android:layout_height="50dp" />
 
         <ImageView
             android:layout_width="55dp"
@@ -678,13 +681,6 @@
             android:layout_alignStart="@+id/imageView36"
             android:id="@+id/einserchoice9"></LinearLayout>
 
-        <Button
-            android:text="RESET"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/tausender"
-            android:layout_toEndOf="@+id/winner"
-            android:id="@+id/rbutton" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
