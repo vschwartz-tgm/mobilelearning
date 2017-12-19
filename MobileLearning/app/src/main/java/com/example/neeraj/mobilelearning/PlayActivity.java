@@ -45,7 +45,7 @@ public class PlayActivity extends AppCompatActivity {
         });
 
         // Button, welcher für das Spiel TextZuSpeech zustädig ist.
-        //textzuspeech = (Button)findViewById(R.id.textspeech);
+        /*textzuspeech = (Button)findViewById(R.id.textspeech);
         textzuspeech.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,7 +53,7 @@ public class PlayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        */
         // Button, welcher für das Spiel PerleZuZahl zustädig ist.
         perlezuzahl = (Button)findViewById(R.id.perle_zu_zahl);
         perlezuzahl.setOnClickListener(new View.OnClickListener() {
