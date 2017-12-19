@@ -25,6 +25,12 @@
         tools:layout_constraintTop_creator="1">
 
         <TextView
+            android:id="@+id/winner"
+            android:text="Perle zu Zahl"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/zahl_wort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
