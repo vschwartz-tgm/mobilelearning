@@ -8,21 +8,40 @@ import android.widget.Spinner;
  * Diese Klasse soll für die Einstellungen zustädig sein.
  */
 public class Settings extends AppCompatActivity {
-    Spinner dropdownStart;
-    Spinner dropdownEnd;
-    String[] items;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-/*
-        this.dropdownStart = (Spinner) findViewById(R.id.spinnerStart);
-        this.dropdownEnd = (Spinner) findViewById(R.id.spinnerEnd);
-        for(int i = 0; i < 1000; i++) {
-            this.items = new String[i];
-        }*/
+        }
     }
-}
+/**
+import android.os.Bundle;
+import android.app.Activity;
+import android.widget.NumberPicker;
+import android.widget.TextView;
+
+public class Settings extends AppCompatActivity {
+    TextView numberView;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_number_picker_app);
+        numberView = (TextView)findViewById(R.id.numberview);
+        NumberPicker numberPicker = (NumberPicker) findViewById(R.id.numberpicker);
+        numberPicker.setMaxValue(100);       //1
+        numberPicker.setMinValue(0);         //2
+        numberPicker.setWrapSelectorWheel(true);
+        numberPicker.setOnValueChangedListener( new NumberPicker.
+                OnValueChangeListener()) {
+            @Override
+            public void onValueChange(NumberPicker picker, int
+                    oldVal, int newVal) {
+                numberView.setText("Selected number is " + newVal);
+            }
+        }
+    }
+}**/
