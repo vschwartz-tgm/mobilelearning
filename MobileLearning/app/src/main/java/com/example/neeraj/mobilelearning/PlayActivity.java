@@ -11,7 +11,7 @@ import android.widget.Button;
  */
 public class PlayActivity extends AppCompatActivity {
 
-    public Button wort2zahl,wort2zahltxt,markezuzahl,textzuspeech,perlezuzahl;
+    public Button wort2zahl,wort2zahltxt,markezuzahl,settings,perlezuzahl;
 
     public void init(){
         // Button, welcher für das Spiel Wort2Zahl zustädig ist.
@@ -44,16 +44,16 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        // Button, welcher für das Spiel TextZuSpeech zustädig ist.
-        /*textzuspeech = (Button)findViewById(R.id.textspeech);
-        textzuspeech.setOnClickListener(new View.OnClickListener() {
+        // Button, welcher für das Settingmenü zustädig ist.
+        settings = (Button)findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(PlayActivity.this, Speech.class);
+                Intent intent = new Intent(PlayActivity.this, Settings.class);
                 startActivity(intent);
             }
         });
-        */
+
         // Button, welcher für das Spiel PerleZuZahl zustädig ist.
         perlezuzahl = (Button)findViewById(R.id.perle_zu_zahl);
         perlezuzahl.setOnClickListener(new View.OnClickListener() {
