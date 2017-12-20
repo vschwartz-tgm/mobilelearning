@@ -73,7 +73,7 @@
             android:layout_marginTop="70dp"
             android:layout_toStartOf="@+id/zahl_wort"
             app:srcCompat="@drawable/tausender" />
-
+        <!--
         <ImageView
             android:id="@+id/tausender2"
             android:layout_width="50dp"
@@ -93,7 +93,7 @@
             android:layout_alignTop="@+id/tausender2"
             android:layout_alignLeft="@+id/tausender2"
             app:srcCompat="@drawable/tausender" />
-
+        -->
         <ImageView
             android:id="@+id/hunderter"
             android:layout_width="50dp"
@@ -102,7 +102,7 @@
             android:layout_alignTop="@+id/tausender"
             android:layout_toEndOf="@+id/tausender"
             app:srcCompat="@drawable/hunderter" />
-
+        <!--
         <ImageView
             android:id="@+id/hunderter2"
             android:layout_width="50dp"
@@ -122,6 +122,7 @@
             android:layout_alignTop="@+id/hunderter2"
             android:layout_alignLeft="@+id/hunderter2"
             app:srcCompat="@drawable/hunderter" />
+        -->
         <ImageView
             android:id="@+id/zehner"
             android:layout_width="50dp"
@@ -130,7 +131,7 @@
             android:layout_alignTop="@+id/hunderter"
             android:layout_toEndOf="@+id/hunderter"
             app:srcCompat="@drawable/zehner" />
-
+        <!--
         <ImageView
             android:id="@+id/zehner2"
             android:layout_width="50dp"
@@ -150,7 +151,7 @@
             android:layout_alignTop="@+id/zehner2"
             android:layout_alignLeft="@+id/zehner2"
             app:srcCompat="@drawable/zehner" />
-
+        -->
         <ImageView
             android:id="@+id/einser"
             android:layout_width="50dp"
@@ -159,7 +160,7 @@
             android:layout_alignTop="@+id/zehner"
             android:layout_toEndOf="@+id/zehner"
             app:srcCompat="@drawable/einser" />
-
+        <!--
         <ImageView
             android:id="@+id/einser2"
             android:layout_width="50dp"
@@ -179,7 +180,7 @@
             android:layout_alignTop="@+id/einser2"
             android:layout_alignLeft="@+id/einser2"
             app:srcCompat="@drawable/einser" />
-
+        -->
         <ImageView
             app:srcCompat="@android:color/background_light"
             android:id="@+id/tausenderb1"
