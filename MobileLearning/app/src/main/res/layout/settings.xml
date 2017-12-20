@@ -31,10 +31,9 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button3"
-        android:layout_below="@+id/button3"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="93dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="60dp"
         android:text="Musik/Ton"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -43,24 +42,47 @@
         android:id="@+id/mtswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/textZahlen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:layout_marginTop="52dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mtswitch"
+        android:layout_marginTop="60dp"
         android:textSize="30sp"
         android:textStyle="bold"
         android:text="Zahlenbereich" />
 
     <SeekBar
         android:id="@+id/seekBarZahlen"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textZahlen"
-        android:layout_alignEnd="@+id/mtswitch" />
+        android:layout_below="@id/textZahlen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekBarZahlen"
+        android:layout_below="@+id/seekBarZahlen"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="6dp"
+        android:text="Max"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarZahlen"
+        android:layout_marginTop="6dp"
+        android:layout_alignStart="@id/seekBarZahlen"
+        android:text="Min"
+        android:textSize="20sp"/>
 </RelativeLayout>
