@@ -126,12 +126,20 @@ public class markezuzahl extends AppCompatActivity{
      */
     public void checkWin(){
         if (ergebnis > n){
+<<<<<<< HEAD
+            //win = (TextView) findViewById(R.id.winner);
+=======
             win = (TextView)findViewById(R.id.winner);
+>>>>>>> 82e5c4c5293fc621a53a22ab29c7f241c5e8c8e2
             win.setText("WRONG. RELOAD.");
 
         } else if (ergebnis == n){
             ergebnis = 0;
+<<<<<<< HEAD
+            //win = (TextView) findViewById(R.id.winner);
+=======
             win = (TextView)findViewById(R.id.winner);
+>>>>>>> 82e5c4c5293fc621a53a22ab29c7f241c5e8c8e2
             win.setText("YOU WON!");
 
         }
