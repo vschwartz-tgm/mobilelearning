@@ -92,6 +92,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/max"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         android:text="0">
     </TextView>
+=======
+        android:text="0" />
+
+>>>>>>> 2445a74152fd146ef1794e795104fb8347aea938
 </RelativeLayout>

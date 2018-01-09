@@ -149,7 +149,7 @@ public class wort2ZahlText extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String textnum = zahl_eingabe.getText().toString();
-                int num = Integer.parseInt(textnum);
+                int num = Integer.parseInt(textnum  );
                 zahl_wort.setText(""+nice(num));
             }
         });
