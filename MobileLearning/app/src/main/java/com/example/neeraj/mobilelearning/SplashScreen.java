@@ -19,6 +19,8 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+
+
         Thread background = new Thread() {
             public void run() {
 
@@ -36,10 +38,12 @@ public class SplashScreen extends Activity {
                 } catch (Exception e) {
 
                 }
+
             }
         };
         background.start();
     }
+
 
     @Override
     protected void onDestroy() {
