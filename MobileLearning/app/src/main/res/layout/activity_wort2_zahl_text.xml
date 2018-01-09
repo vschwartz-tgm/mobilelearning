@@ -176,7 +176,7 @@
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:background="@android:color/holo_red_light"
-                    android:text="delete"
+                    android:text="löschen"
                     android:textSize="25sp" />
 
                 <Button
