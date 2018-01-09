@@ -127,7 +127,7 @@ public class markezuzahl extends AppCompatActivity{
     public void checkWin(){
         if (ergebnis > n){
             win = (TextView) findViewById(R.id.winner);
-            win.setText("Verloren. Versuch es nochmal!");
+            win.setText("Leider verloren!");
 
         } else if (ergebnis == n){
             ergebnis = 0;
