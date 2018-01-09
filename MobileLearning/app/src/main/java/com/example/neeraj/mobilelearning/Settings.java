@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
+import android.widget.Button;
+=======
 import android.widget.ImageButton;
 import android.widget.SeekBar;
+>>>>>>> 208614bd148c9e47d2a7790a0931fb4e5f069ad4
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,11 +23,28 @@ public class Settings extends AppCompatActivity {
     /*Spinner dropdownStart;
     Spinner dropdownEnd;
     String[] items;
+<<<<<<< HEAD
+    public Button buttonback;
+=======
+>>>>>>> 208614bd148c9e47d2a7790a0931fb4e5f069ad4
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
+<<<<<<< HEAD
+
+        buttonback = (Button) findViewById(R.id.buttonback);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Settings.this, PlayActivity.class);
+                startActivity(intent);
+            }
+        });
+/*
+=======
+>>>>>>> 208614bd148c9e47d2a7790a0931fb4e5f069ad4
         this.dropdownStart = (Spinner) findViewById(R.id.spinnerStart);
         this.dropdownEnd = (Spinner) findViewById(R.id.spinnerEnd);
         for(int i = 0; i < 1000; i++) {

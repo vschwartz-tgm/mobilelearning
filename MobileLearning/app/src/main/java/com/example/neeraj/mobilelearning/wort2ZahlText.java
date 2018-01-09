@@ -1,5 +1,6 @@
 package com.example.neeraj.mobilelearning;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,13 +16,22 @@ public class wort2ZahlText extends AppCompatActivity {
     TextView zahl_wort;
     Button test_num_txt;
     String text = "";
-    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel;
+    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel,buttonback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wort2_zahl_text);
         init();
         keyboard();
+
+        buttonback = (Button) findViewById(R.id.buttonback);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(wort2ZahlText.this, PlayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
