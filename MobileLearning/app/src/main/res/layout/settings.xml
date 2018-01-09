@@ -73,7 +73,7 @@
         android:layout_below="@+id/seekBarZahlen"
         android:layout_marginStart="25dp"
         android:layout_marginTop="6dp"
-        android:text="Max"
+        android:text="1000"
         android:textSize="20sp"/>
 
     <TextView
@@ -83,6 +83,6 @@
         android:layout_below="@+id/seekBarZahlen"
         android:layout_marginTop="6dp"
         android:layout_alignStart="@id/seekBarZahlen"
-        android:text="Min"
+        android:text="0"
         android:textSize="20sp"/>
 </RelativeLayout>

@@ -92,6 +92,7 @@
             android:layout_height="100dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
             android:background="@drawable/info" />
 
     </RelativeLayout>
