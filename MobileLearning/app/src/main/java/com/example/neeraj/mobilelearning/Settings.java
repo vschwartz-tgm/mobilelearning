@@ -4,12 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-<<<<<<< HEAD
 import android.widget.Button;
-=======
 import android.widget.ImageButton;
 import android.widget.SeekBar;
->>>>>>> 208614bd148c9e47d2a7790a0931fb4e5f069ad4
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;

@@ -149,8 +149,7 @@ public class wort2ZahlText extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String textnum = zahl_eingabe.getText().toString();
-                String newNum = textnum.replace("billion", "milliarde");
-                int num = Integer.parseInt(newNum);
+                int num = Integer.parseInt(textnum  );
                 zahl_wort.setText(""+nice(num));
             }
         });
