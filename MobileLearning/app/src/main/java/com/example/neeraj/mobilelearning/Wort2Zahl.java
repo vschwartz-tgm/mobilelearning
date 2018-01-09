@@ -207,7 +207,7 @@ public class Wort2Zahl extends AppCompatActivity {
     public void getAns(String ans){
 
         if (ans.equals(Integer.toString(answ1))) {
-            punkte.setText("Score: " + score);
+            punkte.setText("Spielstand: " + score);
             score++;
         }else {
             Intent intent = new Intent(Wort2Zahl.this,

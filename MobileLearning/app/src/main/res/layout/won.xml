@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg"
     android:weightSum="1">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="0.04"
-        android:text="Sie haben gewonnen!"
+        android:text="Du hast gewonnen!"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp"
