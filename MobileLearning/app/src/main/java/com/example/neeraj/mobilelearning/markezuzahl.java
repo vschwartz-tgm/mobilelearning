@@ -127,12 +127,12 @@ public class markezuzahl extends AppCompatActivity{
     public void checkWin(){
         if (ergebnis > n){
             win = (TextView) findViewById(R.id.winner);
-            win.setText("WRONG. RELOAD.");
+            win.setText("Verloren. Versuch es nochmal!");
 
         } else if (ergebnis == n){
             ergebnis = 0;
             win = (TextView) findViewById(R.id.winner);
-            win.setText("YOU WON!");
+            win.setText("Gewonnen!");
 
         }
     }
