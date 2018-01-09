@@ -73,16 +73,25 @@
         android:layout_below="@+id/seekBarZahlen"
         android:layout_marginStart="25dp"
         android:layout_marginTop="6dp"
-        android:text="Max"
-        android:textSize="20sp"/>
+        android:text="1000"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/min"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@id/seekBarZahlen"
         android:layout_below="@+id/seekBarZahlen"
         android:layout_marginTop="6dp"
-        android:layout_alignStart="@id/seekBarZahlen"
-        android:text="Min"
-        android:textSize="20sp"/>
+        android:text="0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/numAuswahl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/max"
+        android:layout_centerHorizontal="true"
+        android:text="0" />
+
 </RelativeLayout>
