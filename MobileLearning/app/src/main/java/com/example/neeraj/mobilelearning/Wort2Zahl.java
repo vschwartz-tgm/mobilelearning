@@ -31,7 +31,7 @@ public class Wort2Zahl extends AppCompatActivity {
     static int msg = 0;
     TextView punkte,times;
     CounterClass timer;
-    Button buttonleftup, buttonrightup,buttonleftdown,buttonrightdown;
+    Button buttonleftup, buttonrightup,buttonleftdown,buttonrightdown,buttonback;
 
     /**
      * In dieser Methode wird die rechnen() Methode aufgerufen.
@@ -49,6 +49,15 @@ public class Wort2Zahl extends AppCompatActivity {
         times.setText("00:02:00");
         timer = new CounterClass(60000, 1000);
         timer.start();
+
+        buttonback = (Button) findViewById(R.id.buttonback);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Wort2Zahl.this, PlayActivity.class);
+                startActivity(intent);
+            }
+        });
 
         buttonleftup = (Button) findViewById(R.id.btn1);
         buttonleftup.setOnClickListener(new View.OnClickListener() {
