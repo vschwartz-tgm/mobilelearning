@@ -51,12 +51,13 @@
             android:id="@+id/score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_alignStart="@id/timers"
             android:text="Spielstand: 0"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_below="@+id/timers"
-            android:layout_marginRight="0dp"/>
+            android:layout_below="@+id/timers"/>
 
         <RelativeLayout
             android:layout_width="match_parent"

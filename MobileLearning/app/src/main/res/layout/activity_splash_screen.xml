@@ -17,11 +17,21 @@
 
         <ImageView
             android:id="@+id/imgLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:layout_marginTop="80dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/and" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/loading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="650dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/loading" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -31,7 +41,7 @@
             android:gravity="center_horizontal"
             android:text="Mobile Learning"
             android:textColor="#ffa000"
-            android:textSize="25sp" />
+            android:textSize="50sp" />
 
 
     </RelativeLayout>
