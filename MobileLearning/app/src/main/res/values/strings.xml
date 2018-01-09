@@ -8,4 +8,8 @@
     <string name="sound">Sound</string>
     <string name="num_auswahl">1 - 10</string>
     <string name="title_activity_wort_zu_zahl">WortZuZahl</string>
+    <string name="help_headline1">Was ist MobileLearning?</string>
+    <string name="help_expl1">MobileLearning ist ein Projekt, welches vom Bundesministerium für Bildung in
+        Auftrag gegeben wurde. Das Projekt ist noch nicht beendet, da noch ein weiteres Projektteam
+        diese Applikation weiterentwickeln wird.</string>
 </resources>
