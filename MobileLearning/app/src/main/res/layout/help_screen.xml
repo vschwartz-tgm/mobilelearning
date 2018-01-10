@@ -35,30 +35,165 @@
             android:background="@drawable/back" />
 
 
-
+        <!-- Erste Überschrift -->
         <TextView
-                android:textSize="20dp"
-                android:id="@+id/headline1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonback"
-                android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/buttonback"
-                android:ems="10"
-                android:inputType="text"
-                android:text="@string/help_headline1" />
-
+            android:textSize="20dp"
+            android:id="@+id/headline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonback"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/buttonback"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/help_headline1" />
+        <!-- Absatz welcher zur ersten Überschrift gehört -->
+        <ScrollView
+            android:id="@+id/sv1"
+            android:layout_width="824px"
+            android:layout_height="200px"
+            android:layout_alignStart="@+id/headline1"
+            android:layout_below="@+id/headline1">
             <TextView
-                android:id="@+id/editText"
-                android:layout_width="550dp"
+                android:id="@+id/textAnsw1"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_alignStart="@+id/headline1"
                 android:layout_below="@+id/headline1"
                 android:layout_marginTop="15dp"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="text|textMultiLine"
                 android:text="@string/help_expl1"
                 android:textSize="16dp" />
+
+        </ScrollView>
+        <!-- Zweite Überschrift -->
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/headline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sv1"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/buttonback"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/help_headline2" />
+        <!-- Absatz welcher zur zweiten Überschrift gehört -->
+        <ScrollView
+            android:id="@id/sv2"
+            android:layout_width="824px"
+            android:layout_height="130px"
+            android:layout_alignStart="@+id/headline2"
+            android:layout_below="@+id/headline2">
+            <TextView
+                android:id="@+id/textAnsw2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/headline1"
+                android:layout_below="@+id/headline1"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:text="@string/help_expl2"
+                android:textSize="16dp" />
+
+        </ScrollView>
+        <!-- Dritte Überschrift -->
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sv2"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/buttonback"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/help_headline3" />
+        <!-- Absatz welcher zur dritten Überschrift gehört -->
+        <ScrollView
+            android:id="@id/sv3"
+            android:layout_width="824px"
+            android:layout_height="130px"
+            android:layout_alignStart="@+id/headline3"
+            android:layout_below="@+id/headline3">
+            <TextView
+                android:id="@+id/textAnsw3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/headline3"
+                android:layout_below="@+id/headline3"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:text="@string/help_expl3"
+                android:textSize="16dp" />
+
+        </ScrollView>
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/headline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sv3"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/buttonback"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/help_headline4" />
+        <!-- Absatz welcher zur dritten Überschrift gehört -->
+        <ScrollView
+            android:id="@+id/sv4"
+            android:layout_width="824px"
+            android:layout_height="130px"
+            android:layout_alignStart="@+id/headline3"
+            android:layout_below="@+id/headline4">
+            <TextView
+                android:id="@+id/textAnsw4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/headline3"
+                android:layout_below="@+id/headline3"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:text="@string/help_expl4"
+                android:textSize="16dp" />
+
+        </ScrollView>
+
+        <TextView
+            android:textSize="20dp"
+            android:id="@+id/headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sv4"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/buttonback"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/help_headline5" />
+        <!-- Absatz welcher zur dritten Überschrift gehört -->
+        <ScrollView
+            android:layout_width="824px"
+            android:layout_height="130px"
+            android:layout_alignStart="@+id/headline3"
+            android:layout_below="@+id/headline5">
+            <TextView
+                android:id="@+id/textAnsw5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignStart="@+id/headline5"
+                android:layout_below="@+id/headline5"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:text="@string/help_expl5"
+                android:textSize="16dp" />
+
+        </ScrollView>
 
     </RelativeLayout>
 
