@@ -129,7 +129,7 @@ public class Wort2Zahl extends AppCompatActivity {
 
     public void rechnen() {
         zahl_wort = (TextView)findViewById(R.id.zahl_wort);
-        answ1 = setRandomZahl(0,MainActivity.range);
+        answ1 = setRandomZahl(0,/*Wenn's nicht funktioniert, hier Settings wegmachen und wieder MainActivity*/Settings.range);
         zahl_wort.setText(""+nice(answ1));
         rand = new Random();
         // answ1 ist die richtige antwort
