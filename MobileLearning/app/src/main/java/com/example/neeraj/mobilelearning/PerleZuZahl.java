@@ -1,6 +1,7 @@
 package com.example.neeraj.mobilelearning;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +28,8 @@ public class PerleZuZahl extends AppCompatActivity{
 
     private int ergebnis, n; // Ergebnis für aufrechnen, n die zu setztende nummber
     TextView cnumber,win;
-    Button rbutton;
+    Button rbutton, buttonback;
+    Button newgame;
     int range;
 
     /**
@@ -36,28 +38,32 @@ public class PerleZuZahl extends AppCompatActivity{
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        range = MainActivity.range;
+        range = 10;
         ergebnis = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perle_zu_zahl);
+
+        buttonback = (Button) findViewById(R.id.buttonback);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PerleZuZahl.this, PlayActivity.class);
+                startActivity(intent);
+            }
+        });
+
         n = setRandomZahl(1,range);
 
         setRNumber(n);
 
-        //rbutton = (Button)findViewById(R.id.markezuzahl_btn);
-        //rbutton.setOnClickListener(new OnClickListener() {
-        //@Override
-        //public void onClick(View v) {
-        //n = setRandomZahl(1,100);
-        //setRNumber(n);
-        //win = (TextView) findViewById(R.id.winner);
-        //win.setText("Not yet.");
-        //clearViews();
-
-        //View einserchoice1 = View.findViewById(R.id.einserchoice1);
-        //((ViewGroup) einserchoice1.getParent()).removeView(einserchoice1);
-        //}
-        //});
+        newgame = (Button) findViewById(R.id.newgame);
+        newgame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PerleZuZahl.this,PerleZuZahl.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -127,12 +133,12 @@ public class PerleZuZahl extends AppCompatActivity{
     public void checkWin(){
         if (ergebnis > n){
             //win = (TextView) findViewById(R.id.winner);
-            win.setText("WRONG. RELOAD.");
+            win.setText("Leider verloren!");
 
         } else if (ergebnis == n){
             ergebnis = 0;
             //win = (TextView) findViewById(R.id.winner);
-            win.setText("YOU WON!");
+            win.setText("Gewonnen!");
             win = (TextView) findViewById(R.id.winner);
             win.setText("Leider verloren!");
 
@@ -537,4 +543,3 @@ public class PerleZuZahl extends AppCompatActivity{
 
     }
 }
-

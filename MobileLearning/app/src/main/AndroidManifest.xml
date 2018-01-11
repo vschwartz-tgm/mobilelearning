@@ -24,7 +24,8 @@
         <activity android:name=".Speech" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".won" />
-        <activity android:name=".PerleZuZahl"></activity>
+        <activity android:name=".PerleZuZahl" />
+        <activity android:name=".HelpScreen" />
     </application>
 
 </manifest>

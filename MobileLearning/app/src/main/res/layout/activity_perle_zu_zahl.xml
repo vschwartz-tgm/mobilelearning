@@ -27,10 +27,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:id="@+id/winner"
-            android:text="Perle zu Zahl"
-            android:textSize="10sp"
+            android:text="Spielstand"
+            android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonback"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back" />
 
         <TextView
             android:id="@+id/zahl_wort"
@@ -54,7 +64,7 @@
             android:id="@+id/cnumber" />
 
         <Button
-            android:text="zurücksetzen"
+            android:text="Neues Spiel"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +72,7 @@
             android:layout_alignTop="@+id/cnumber"
             android:layout_marginStart="40dp"
             android:layout_toEndOf="@+id/cnumber"
-            android:id="@+id/rbutton" />
+            android:id="@+id/newgame" />
 
         <ImageView
             android:id="@+id/tausender"

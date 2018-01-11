@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg"
     android:weightSum="1">
 
 
@@ -92,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/max"
         android:layout_centerHorizontal="true"
-        android:text="0">
+        android:text="">
     </TextView>
 
 </RelativeLayout>

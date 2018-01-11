@@ -21,7 +21,7 @@ public class ResultActivity extends Activity {
         Bundle b = getIntent().getExtras();
         int score = b.getInt("score");
         if (Wort2Zahl.msg!=1) {
-            textResult.setText("Falsche Antwort!! "+ /*Your points are*/"Dein Punktestand:" + " " + score);
+            textResult.setText("Leider Falsch! "+ /*Your points are*/"Dein Punktestand:" + " " + score);
         }else {
             textResult.setText("Zeit abgelaufen!! Dein Punktestand:" + " " + score);
         }
