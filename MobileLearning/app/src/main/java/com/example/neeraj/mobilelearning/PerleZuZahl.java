@@ -28,7 +28,11 @@ public class PerleZuZahl extends AppCompatActivity{
 
     private int ergebnis, n; // Ergebnis für aufrechnen, n die zu setztende nummber
     TextView cnumber,win;
+<<<<<<< HEAD
     Button rbutton, buttonback;
+=======
+    Button newgame;
+>>>>>>> 7aaf4f4923f0495a6cc7bc471b7f404ad68333b2
     int range;
 
     /**
@@ -55,20 +59,14 @@ public class PerleZuZahl extends AppCompatActivity{
 
         setRNumber(n);
 
-        //rbutton = (Button)findViewById(R.id.markezuzahl_btn);
-        //rbutton.setOnClickListener(new OnClickListener() {
-        //@Override
-        //public void onClick(View v) {
-        //n = setRandomZahl(1,100);
-        //setRNumber(n);
-        //win = (TextView) findViewById(R.id.winner);
-        //win.setText("Not yet.");
-        //clearViews();
-
-        //View einserchoice1 = View.findViewById(R.id.einserchoice1);
-        //((ViewGroup) einserchoice1.getParent()).removeView(einserchoice1);
-        //}
-        //});
+        newgame = (Button) findViewById(R.id.newgame);
+        newgame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PerleZuZahl.this,PerleZuZahl.class);
+                startActivity(intent);
+            }
+        });
 
 
 
