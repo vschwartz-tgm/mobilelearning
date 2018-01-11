@@ -55,9 +55,10 @@ public class Settings extends AppCompatActivity {
         numAuswahl = (TextView) findViewById(R.id.numAuswahl);
         //Seekbar für den Zahlenbereich festzulegen
         seekBar = (SeekBar) findViewById(R.id.seekBarZahlen);
-        seekBar.setProgress(0);
+        seekBar.setMax(100);
+        seekBar.setProgress(10);
         range = seekBar.getProgress();
-        numAuswahl.setText("" + seekBar.getProgress() + " - " + seekBar.getProgress());//.getMax());
+        numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress1 = 0;
 

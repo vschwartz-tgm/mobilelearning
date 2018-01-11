@@ -21,7 +21,7 @@ public class HelpScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_screen);
-        init();
+        //init();
 
         buttonback = (Button) findViewById(R.id.buttonback);
         buttonback.setOnClickListener(new View.OnClickListener() {
