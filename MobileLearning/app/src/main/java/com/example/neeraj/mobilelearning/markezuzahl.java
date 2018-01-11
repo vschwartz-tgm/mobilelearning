@@ -1,6 +1,7 @@
 package com.example.neeraj.mobilelearning;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,7 +28,7 @@ public class markezuzahl extends AppCompatActivity{
 
     private int ergebnis, n; // Ergebnis für aufrechnen, n die zu setztende nummber
     TextView cnumber,win;
-    Button rbutton;
+    Button newgame;
     int range;
 
     /**
@@ -44,20 +45,14 @@ public class markezuzahl extends AppCompatActivity{
 
         setRNumber(n);
 
-        //rbutton = (Button)findViewById(R.id.markezuzahl_btn);
-        //rbutton.setOnClickListener(new OnClickListener() {
-        //@Override
-        //public void onClick(View v) {
-            //n = setRandomZahl(1,100);
-            //setRNumber(n);
-            //win = (TextView) findViewById(R.id.winner);
-            //win.setText("Not yet.");
-            //clearViews();
-
-            //View einserchoice1 = View.findViewById(R.id.einserchoice1);
-            //((ViewGroup) einserchoice1.getParent()).removeView(einserchoice1);
-            //}
-        //});
+        newgame = (Button) findViewById(R.id.newgame);
+        newgame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(markezuzahl.this,markezuzahl.class);
+                startActivity(intent);
+            }
+        });
 
 
 

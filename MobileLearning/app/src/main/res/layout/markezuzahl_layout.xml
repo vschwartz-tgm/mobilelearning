@@ -54,7 +54,7 @@
             android:id="@+id/cnumber" />
 
         <Button
-            android:text="zurücksetzen"
+            android:text="Neues Spiel"
             android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             android:layout_alignTop="@+id/cnumber"
             android:layout_marginStart="40dp"
             android:layout_toEndOf="@+id/cnumber"
-            android:id="@+id/rbutton" />
+            android:id="@+id/newgame" />
 
         <ImageView
             android:id="@+id/tausender"
