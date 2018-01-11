@@ -1,7 +1,10 @@
 package com.example.neeraj.mobilelearning;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -10,6 +13,7 @@ import android.widget.TextView;
 
 public class won extends Activity {
     TextView tv;
+    public Button buttonback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,15 @@ public class won extends Activity {
         Bundle b = getIntent().getExtras();
         int y = b.getInt("score")-1;
         tv.setText("Finaler Spielstand:" + y);
+
+        buttonback = (Button) findViewById(R.id.buttonback);
+        buttonback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(won.this, PlayActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
