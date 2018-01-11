@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 /**
@@ -15,17 +16,14 @@ import android.widget.TextView;
 
 public class HelpScreen extends AppCompatActivity {
 
-    TextView headline1;
+    ScrollView sv1, sv2, sv3, sv4;
+    TextView headline1, headline2, headline3, headline4, headline5, answ1, answ2, answ3, answ4, answ5;
     Button buttonback;
-    String displayTextHL1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help_screen);
-        init();
-
-        displayTextHL1 = "Was ist MobileLearning?";
 
         buttonback = (Button) findViewById(R.id.buttonback);
         buttonback.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +36,6 @@ public class HelpScreen extends AppCompatActivity {
     }
 
     public void init(){
-        headline1 = (TextView)findViewById(R.id.headline1);
     }
 
 }

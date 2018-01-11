@@ -11,7 +11,7 @@ import android.widget.Button;
  */
 public class PlayActivity extends AppCompatActivity {
 
-    public Button wort2zahl,wort2zahltxt,markezuzahl,settings,perlezuzahl;
+    public Button wort2zahl,wort2zahltxt,markezuzahl,settings,perlezuzahl,help;
 
     public void init(){
         // Button, welcher für das Spiel Wort2Zahl zustädig ist.
@@ -50,6 +50,16 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PlayActivity.this, Settings.class);
+                startActivity(intent);
+            }
+        });
+
+        // Button, welcher für die Hilfe zustädig ist.
+        help = (Button)findViewById(R.id.info);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PlayActivity.this, HelpScreen.class);
                 startActivity(intent);
             }
         });
