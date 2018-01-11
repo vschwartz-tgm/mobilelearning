@@ -24,6 +24,7 @@ public class Settings extends AppCompatActivity {
     private TextView numAuswahl;
     public static int range;
     public Button buttonback;
+    public static final int MIN = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +34,22 @@ public class Settings extends AppCompatActivity {
         numAuswahl = (TextView) findViewById(R.id.numAuswahl);
         //Seekbar für den Zahlenbereich festzulegen
         seekBar = (SeekBar) findViewById(R.id.seekBarZahlen);
-        seekBar.setMax(100);
+        seekBar.setMax(1000);
         seekBar.setProgress(10);
         range = seekBar.getProgress();
-        numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
+
+
+        numAuswahl.setText("1 - " + seekBar.getProgress());//.getMax());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress1 = 0;
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
                 int step = 10;
                 progress = ((int) Math.round(progress / step)) * step;
                 progress1 = progress;
-                numAuswahl.setText("0 - " + progress1);
+                numAuswahl.setText("1 - " + progress1);
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
 
@@ -58,7 +62,8 @@ public class Settings extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                numAuswahl.setText("0 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
+
+                numAuswahl.setText("1 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
             }

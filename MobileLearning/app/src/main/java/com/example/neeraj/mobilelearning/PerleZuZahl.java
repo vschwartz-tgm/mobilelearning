@@ -38,7 +38,7 @@ public class PerleZuZahl extends AppCompatActivity{
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        range = 10;
+        range = Settings.range;
         ergebnis = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perle_zu_zahl);
