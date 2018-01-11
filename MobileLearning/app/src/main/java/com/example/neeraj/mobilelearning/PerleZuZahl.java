@@ -28,11 +28,8 @@ public class PerleZuZahl extends AppCompatActivity{
 
     private int ergebnis, n; // Ergebnis für aufrechnen, n die zu setztende nummber
     TextView cnumber,win;
-<<<<<<< HEAD
     Button rbutton, buttonback;
-=======
     Button newgame;
->>>>>>> 7aaf4f4923f0495a6cc7bc471b7f404ad68333b2
     int range;
 
     /**
