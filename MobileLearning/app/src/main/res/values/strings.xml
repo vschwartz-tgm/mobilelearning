@@ -12,4 +12,12 @@
     <string name="help_expl1">MobileLearning ist ein Projekt, welches vom Bundesministerium für Bildung in
         Auftrag gegeben wurde. Das Projekt ist noch nicht beendet, da noch ein weiteres Projektteam
         diese Applikation weiterentwickeln wird.</string>
+    <string name="help_headline2">Wort zu Zahl</string>
+    <string name="help_expl2">Es werden Zahlen ausgeschrieben angezeigt. Die Aufgabe besteht darin, die richtige Zahl dem Wort zuzuordnen.</string>
+    <string name="help_headline3">Perle zu Zahl</string>
+    <string name="help_expl3">Es wird eine Zahl gezeigt, die mithilfe der Perlen gelegt werden soll.</string>
+    <string name="help_headline4">Marke zu Zahl</string>
+    <string name="help_expl4">Es wird eine Zahl gezeigt, die mithilfe der Marken gelegt werden soll.</string>
+    <string name="help_headline5">Zahl zu Text</string>
+    <string name="help_expl5">Es wird eine Zahl eingegeben, die danach als Wort ausgeschrieben angezeigt wird.</string>
 </resources>
