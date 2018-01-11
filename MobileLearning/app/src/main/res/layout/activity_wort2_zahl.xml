@@ -54,7 +54,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_alignStart="@id/timers"
-            android:text="Spielstand: 0"
+            android:text="Punktestand: 0"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_below="@+id/timers"/>
@@ -134,6 +134,7 @@
                 android:id="@+id/buttonback"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginStart="10dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/back" />
