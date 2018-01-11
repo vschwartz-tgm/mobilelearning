@@ -30,6 +30,40 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
+        numAuswahl = (TextView) findViewById(R.id.numAuswahl);
+        //Seekbar für den Zahlenbereich festzulegen
+        seekBar = (SeekBar) findViewById(R.id.seekBarZahlen);
+        seekBar.setMax(100);
+        seekBar.setProgress(10);
+        range = seekBar.getProgress();
+        numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            int progress1 = 0;
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                int step = 10;
+                progress = ((int) Math.round(progress / step)) * step;
+                progress1 = progress;
+                numAuswahl.setText("0 - " + progress1);
+                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
+                range = progress1;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                numAuswahl.setText("0 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
+                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
+                range = progress1;
+            }
+        });
+
         buttonback = (Button) findViewById(R.id.buttonback);
         buttonback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,41 +84,11 @@ public class Settings extends AppCompatActivity {
     /**
      * In dieser Methode sind die clickListener, die für den Play Button sowie für die Seekbar verantwortlich sind, definiert.
      */
+
+
     public void init() {
         //TextVIew für das Anzeigen von Zahlenbereich
-        numAuswahl = (TextView) findViewById(R.id.numAuswahl);
-        //Seekbar für den Zahlenbereich festzulegen
-        seekBar = (SeekBar) findViewById(R.id.seekBarZahlen);
-        seekBar.setMax(100);
-        seekBar.setProgress(10);
-        range = seekBar.getProgress();
-        numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progress1 = 0;
 
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                int schritt = 10;
-                progress = ((int) Math.round(progress / schritt)) * schritt;
-                progress1 = progress;
-                numAuswahl.setText(/*""+ progress1 + */"0 - " + progress1/*seekBar.getMax()*/);
-                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
-                range = progress1;
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                numAuswahl.setText("0 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
-                Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
-                range = progress1;
-            }
-        });
     }
 }
 
