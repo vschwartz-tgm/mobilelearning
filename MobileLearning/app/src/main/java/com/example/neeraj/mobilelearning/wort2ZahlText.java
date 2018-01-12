@@ -1,28 +1,35 @@
 package com.example.neeraj.mobilelearning;
 
 import android.content.Intent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
+import java.util.Locale;
 
 /**
  * In dieser Methode werden zahlen in Text umgewandelt. Der Nuter kann eine Zahl eingeben, die wird in Form von Text auf dem Display aufgegeben.
  */
-public class wort2ZahlText extends AppCompatActivity {
+public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnInitListener {
     TextView zahl_eingabe;
     TextView zahl_wort;
     Button test_num_txt;
     String text = "";
-    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel,buttonback;
+    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel,buttonback,buttonspeech;
+    private TextToSpeech tts;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wort2_zahl_text);
         init();
         keyboard();
+        tts = new TextToSpeech(this, this);
 
         buttonback = (Button) findViewById(R.id.buttonback);
         buttonback.setOnClickListener(new View.OnClickListener() {
@@ -32,8 +39,15 @@ public class wort2ZahlText extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+        buttonspeech = (Button) findViewById(R.id.buttonspeech);
+        buttonspeech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                speakOut();
+            }
+        });
+    }
 
     public String nice(int a){
         String numtotxt = NumberToWords.convert(a);
@@ -46,7 +60,6 @@ public class wort2ZahlText extends AppCompatActivity {
 
         return b.toString();
     }
-
 
     public void init(){
         zahl_wort = (TextView)findViewById(R.id.zahl_wort);
@@ -168,5 +181,45 @@ public class wort2ZahlText extends AppCompatActivity {
             text = s.substring(0, s.length()-1);
         }
         zahl_eingabe.setText(text);
+    }
+
+    /**
+     * Methode für Sprachausgabe
+     */
+    public void speakOut(){
+        String text = "";
+        text = zahl_wort.getText().toString();
+        if (!text.equals("Zahl Eingeben")) tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    /**
+     * Methode für Sprachausgabe
+     */
+    @Override
+    public void onDestroy() {
+        // Don't forget to shutdown tts!
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }
+
+    /**
+     * Methode für Sprachausgabe
+     */
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            int result = tts.setLanguage(Locale.GERMANY);
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            } else {
+                speakOut();
+            }
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
     }
 }

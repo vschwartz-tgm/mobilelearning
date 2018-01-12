@@ -210,13 +210,23 @@
         </TableLayout>
 
         <Button
-            android:id="@+id/buttonback"
+        android:id="@+id/buttonback"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back" />
+
+        <Button
+            android:id="@+id/buttonspeech"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:background="@drawable/back" />
+            android:background="@drawable/speech" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
