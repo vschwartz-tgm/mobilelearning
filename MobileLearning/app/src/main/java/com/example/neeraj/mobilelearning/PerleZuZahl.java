@@ -132,13 +132,6 @@ public class PerleZuZahl extends AppCompatActivity{
      */
     public void checkWin(){
         if (ergebnis > n){
-            //win = (TextView) findViewById(R.id.winner);
-            win.setText("Leider verloren!");
-
-        } else if (ergebnis == n){
-            ergebnis = 0;
-            //win = (TextView) findViewById(R.id.winner);
-            win.setText("Gewonnen!");
             win = (TextView) findViewById(R.id.winner);
             win.setText("Leider verloren!");
 
