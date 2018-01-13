@@ -22,7 +22,7 @@ public class Settings extends AppCompatActivity {
     String[] items;*/
     private SeekBar seekBar;
     private TextView numAuswahl;
-    public static int range;
+    public static int range = 100;
     public Button buttonback;
     public static final int MIN = 1;
 
@@ -39,7 +39,7 @@ public class Settings extends AppCompatActivity {
         range = seekBar.getProgress();
 
 
-        numAuswahl.setText("1 - " + seekBar.getProgress());//.getMax());
+        numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress1 = 0;
 
@@ -49,7 +49,7 @@ public class Settings extends AppCompatActivity {
                 int step = 10;
                 progress = ((int) Math.round(progress / step)) * step;
                 progress1 = progress;
-                numAuswahl.setText("1 - " + progress1);
+                numAuswahl.setText("0 - " + progress1);
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
 
@@ -63,7 +63,7 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-                numAuswahl.setText("1 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
+                numAuswahl.setText("0 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
             }
