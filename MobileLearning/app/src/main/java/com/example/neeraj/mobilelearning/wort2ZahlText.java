@@ -57,6 +57,9 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
             b.replace(i, i + 1, b.substring(i,i + 1).toUpperCase());
             i =  b.indexOf(" ", i) + 1;
         } while (i > 0 && i < b.length());
+        if (b.toString().equals("Ein")){
+            b.append('s');
+        }
 
         return b.toString();
     }
