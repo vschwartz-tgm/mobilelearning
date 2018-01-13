@@ -81,75 +81,78 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
         numdel = (Button)findViewById(R.id.ndel);
         numok = (Button)findViewById(R.id.nok);
 
+        // Buttons write Numbers into a string
+
         num0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(0);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(0);
+                }
+            });
 
         num1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(1);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(1);
+                }
+            });
 
         num2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(2);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(2);
+                }
+            });
 
         num3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(3);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(3);
+                }
+            });
 
         num4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(4);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(4);
+                }
+            });
 
         num5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(5);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(5);
+                }
+            });
 
         num6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(6);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(6);
+                }
+            });
 
         num7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(7);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(7);
+                }
+            });
 
         num8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(8);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(8);
+                }
+            });
 
         num9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setNum(9);
-            }
-        });
+                @Override
+                public void onClick(View v) {
+                    setNum(9);
+                }
+            });
+
 
         numdel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,8 +172,13 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
     }
 
     public void setNum(int num){
-        text += num;
+        // Begrenzung auf 5 Stellen, da wahrscheinlich nicht mehr benötigt wird.
+        if(text.length() < 5) {
+            text += num;
+            zahl_eingabe.setText(text);
+        }
         zahl_eingabe.setText(text);
+
     }
 
     public void delNum() {
