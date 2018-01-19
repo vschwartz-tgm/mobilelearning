@@ -20,9 +20,13 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
     TextView zahl_wort;
     Button test_num_txt;
     String text = "";
-    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel,buttonback,buttonspeech;
-    private TextToSpeech tts;
+    Button num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,numok,numdel,buttonback,buttonspeech; // Buttons
+    private TextToSpeech tts; // Sprachausgabe Variable
 
+    /**
+     * Mehode onCreate, wird beim Erstellen aufgerufen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,11 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
         });
     }
 
+    /**
+     * Methode nice
+     * @param a
+     * @return
+     */
     public String nice(int a){
         String numtotxt = NumberToWords.convert(a);
         StringBuilder b = new StringBuilder(numtotxt);
@@ -60,16 +69,21 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
         if (b.toString().equals("Ein")){
             b.append('s');
         }
-
         return b.toString();
     }
 
+    /**
+     * Konstruktor
+     */
     public void init(){
         zahl_wort = (TextView)findViewById(R.id.zahl_wort);
         test_num_txt = (Button)findViewById(R.id.btn1);
         zahl_eingabe = (TextView) findViewById(R.id.zahl_eingabe);
     }
 
+    /**
+     * Methode keyboard, Keyboard setzen
+     */
     public void keyboard(){
         num0 = (Button)findViewById(R.id.n0);
         num1 = (Button)findViewById(R.id.n1);
@@ -85,95 +99,91 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
         numok = (Button)findViewById(R.id.nok);
 
         // Buttons write Numbers into a string
-
         num0.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(0);
                 }
             });
-
         num1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(1);
                 }
             });
-
         num2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(2);
                 }
             });
-
         num3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(3);
                 }
             });
-
         num4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(4);
                 }
             });
-
         num5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(5);
                 }
             });
-
         num6.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(6);
                 }
             });
-
         num7.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(7);
                 }
             });
-
         num8.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(8);
                 }
             });
-
         num9.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     setNum(9);
                 }
             });
-
-
         numdel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 delNum();
             }
         });
-
         numok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String textnum = zahl_eingabe.getText().toString();
-                int num = Integer.parseInt(textnum  );
-                zahl_wort.setText(""+nice(num));
+                System.out.print(textnum);
+                if(textnum=="") {
+                    zahl_wort.setText("Zahl eingeben");
+                }else{
+                    int num = Integer.parseInt(textnum);
+                    zahl_wort.setText("" + nice(num));
+                }
             }
         });
     }
 
+    /**
+     * Methode setNum
+     * @param num
+     */
     public void setNum(int num){
         // Begrenzung auf 5 Stellen, da wahrscheinlich nicht mehr benötigt wird.
         if(text.length() < 5) {
@@ -184,6 +194,9 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
 
     }
 
+    /**
+     * Methode delNum
+     */
     public void delNum() {
         String s = text;
         if (s == null || s.length() == 0) {

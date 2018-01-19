@@ -18,18 +18,15 @@ import android.widget.*;
 import java.util.Random;
 
 /**
- * Logik Klasse fü das Marke zu Zahl Spiel
+ * Logik Klasse für das Marke zu Zahl Spiel
  * Created by Rasic Benjamin on 09.05.2017.
  */
 
 public class markezuzahl extends AppCompatActivity{
-    //ImageView oldView, newView;
-    //LinearLayout container;
-
     private int ergebnis, n; // Ergebnis für aufrechnen, n die zu setztende nummber
     TextView cnumber,win;
-    Button rbutton, buttonback;
-    Button newgame;
+    Button buttonback; // Zurückbutton
+    Button newgame; // Button für neues Spiel
     int range;
 
     /**
@@ -52,7 +49,7 @@ public class markezuzahl extends AppCompatActivity{
             }
         });
 
-        n = setRandomZahl(1,range);
+        n = setRandomZahl(1, range);
 
         setRNumber(n);
 
@@ -60,12 +57,10 @@ public class markezuzahl extends AppCompatActivity{
         newgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(markezuzahl.this,markezuzahl.class);
+                Intent intent = new Intent(markezuzahl.this, markezuzahl.class);
                 startActivity(intent);
             }
         });
-
-
 
         findViewById(R.id.einser).setOnTouchListener(new MyTouchListener());
         findViewById(R.id.zehner).setOnTouchListener(new MyTouchListener());
@@ -116,15 +111,12 @@ public class markezuzahl extends AppCompatActivity{
         findViewById(R.id.zehnerchoice9).setOnDragListener(new MyDragListener());
         findViewById(R.id.hunderterchoice9).setOnDragListener(new MyDragListener());
         findViewById(R.id.tausenderchoice9).setOnDragListener(new MyDragListener());
-
-
     }
 
     /**
      * Clear all the views
      */
     public void clearViews(){
-
     }
 
     /**
@@ -188,12 +180,10 @@ public class markezuzahl extends AppCompatActivity{
 
     }
 
-
     /**
      * Handles reaction to use touch
      */
     private final class MyTouchListener implements OnTouchListener {
-
         @Override
         public boolean onTouch(View view, MotionEvent motionEvent) {
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
@@ -214,9 +204,7 @@ public class markezuzahl extends AppCompatActivity{
      * Handles reaction to user Drag
      */
     class MyDragListener implements OnDragListener {
-
         @Override
-
             public boolean onDrag(View v, DragEvent event) {
                 int action = event.getAction();
                 switch (event.getAction()) {
@@ -232,15 +220,11 @@ public class markezuzahl extends AppCompatActivity{
                         View view = (View) event.getLocalState();
                         LinearLayout container =  (LinearLayout) v;
 
-
                         String dragid = view.getResources().getResourceEntryName(view.getId());
                         Log.d("draggedid", dragid);
 
-
-
                         String cdrag = v.getResources().getResourceEntryName(v.getId());
                         Log.d("containerid", cdrag);
-
 
                         if (cdrag.equals("einserchoice1") && dragid.equals("einser")){ // Right mark in the right field
                             calculate(dragid);
@@ -528,14 +512,11 @@ public class markezuzahl extends AppCompatActivity{
                             break;
                         }
 
-
                         case DragEvent.ACTION_DRAG_ENDED:
                         break;
                     }
 
                 return true;
             }
-
         }
     }
-

@@ -50,11 +50,7 @@ public class NumberToWords {
         }
         return aa;
     }
-    /*
-    if(number == 1 || number < 200 && number > 99){
 
-    }
-*/
     /***
      * Hier werden die restlichen Zahlen konvertiert.
      * @param number die umzuwandelne Zahl

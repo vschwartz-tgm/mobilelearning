@@ -13,8 +13,12 @@ import android.widget.TextView;
 
 public class won extends Activity {
     TextView tv;
-    public Button buttonback;
+    public Button buttonback; // Zurückbutton
 
+    /**
+     * Methode onCreate, wird beim Erstellen aufgerufen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +38,18 @@ public class won extends Activity {
         });
     }
 
+    /**
+     * Mehode onStop, beim Stop aufgerufen
+     */
     @Override
     protected void onStop() {
         super.onStop();
         finish();
     }
 
+    /**
+     * Mehode onStop, beim Schließen aufgerufen
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

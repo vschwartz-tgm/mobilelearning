@@ -22,7 +22,6 @@ import java.util.concurrent.TimeUnit;
  * @author Neeraj Rattu
  */
 public class Wort2Zahl extends AppCompatActivity {
-
     TextView zahl_wort;
     Random rand;
     int answ1;
@@ -31,7 +30,7 @@ public class Wort2Zahl extends AppCompatActivity {
     static int msg = 0;
     TextView punkte,times;
     CounterClass timer;
-    Button buttonleftup, buttonrightup,buttonleftdown,buttonrightdown,buttonback;
+    Button buttonleftup,buttonrightup,buttonleftdown,buttonrightdown,buttonback; // Buttons
 
     /**
      * In dieser Methode wird die rechnen() Methode aufgerufen.
@@ -91,8 +90,11 @@ public class Wort2Zahl extends AppCompatActivity {
             }
         });
 
-
     }
+
+    /**
+     * Methode onStop, beim Stop aufgerufen
+     */
     @Override
     protected void onStop() {
         super.onStop();
@@ -100,6 +102,9 @@ public class Wort2Zahl extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * Mehode onPause, bei Pause aufgerufen
+     */
     @Override
     protected void onPause() {
         super.onPause();
@@ -107,13 +112,23 @@ public class Wort2Zahl extends AppCompatActivity {
         finish();
     }
 
-
+    /**
+     * Methode setRandomZahl, generiert Random Zahl
+     * @param min
+     * @param max
+     * @return
+     */
     public int setRandomZahl(int min, int max) {
         Random r = new Random();
         int a = r.nextInt((max - min) + 1) + min;
         return a;
     }
 
+    /**
+     * Methode nice
+     * @param a
+     * @return
+     */
     public String nice(int a){
         String numtotxt = NumberToWords.convert(a);
         StringBuilder b = new StringBuilder(numtotxt);
@@ -126,7 +141,9 @@ public class Wort2Zahl extends AppCompatActivity {
         return b.toString();
     }
 
-
+    /**
+     * Methode rechnen
+     */
     public void rechnen() {
         zahl_wort = (TextView)findViewById(R.id.zahl_wort);
         answ1 = setRandomZahl(0,/*Wenn's nicht funktioniert, hier Settings wegmachen und wieder MainActivity*/Settings.range);
@@ -142,7 +159,6 @@ public class Wort2Zahl extends AppCompatActivity {
         if (unterg <=0){
             unterg = answ1+3;
         }
-
 
         int wronganswer1 = 0;
         if (answ1 > 20 && answ1 < 100) {
@@ -176,17 +192,14 @@ public class Wort2Zahl extends AppCompatActivity {
         } else {
             wronganswer1 = r1.nextInt(oberg) + unterg;
         }
-
-      //int wronganswer1 = r1.nextInt(oberg) + unterg;
+        //int wronganswer1 = r1.nextInt(oberg) + unterg;
         int wronganswer2 = r2.nextInt(oberg) + unterg;
         int wronganswer3 = r3.nextInt(oberg) + unterg;
-
 
         ans[0] = Integer.toString(answ1);
         ans[1] = Integer.toString(wronganswer1);
         ans[2] = Integer.toString(wronganswer2);
         ans[3] = Integer.toString(wronganswer3);
-
 
         List<Button> btns = new ArrayList<Button>(4);
 
@@ -213,8 +226,11 @@ public class Wort2Zahl extends AppCompatActivity {
 
     }
 
+    /**
+     * Methode getAns
+     * @param ans
+     */
     public void getAns(String ans){
-
         if (ans.equals(Integer.toString(answ1))) {
             punkte.setText("Punktestand: " + score);
             score++;
@@ -240,16 +256,16 @@ public class Wort2Zahl extends AppCompatActivity {
             finish();
             timer.cancel();
         }
-
     }
 
+    /**
+     * Klasse Counterclass
+     */
     public class CounterClass extends CountDownTimer {
-
         public CounterClass(long millisInFuture, long countDownInterval) {
             super(millisInFuture, countDownInterval);
             // TODO Auto-generated constructor stub
         }
-
 
         @Override
         public void onFinish() {
@@ -261,13 +277,10 @@ public class Wort2Zahl extends AppCompatActivity {
             intent.putExtras(b);
             startActivity(intent);
             finish();
-
         }
 
         @Override
         public void onTick(long millisUntilFinished) {
-            // TODO Auto-generated method stub
-
             long millis = millisUntilFinished;
             String hms = String.format(
                     "%02d:%02d:%02d",
@@ -281,8 +294,6 @@ public class Wort2Zahl extends AppCompatActivity {
             System.out.println(hms);
             times.setText(hms);
         }
-
-
     }
 
 }

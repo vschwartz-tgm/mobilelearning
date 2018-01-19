@@ -15,11 +15,14 @@ import android.widget.TextView;
  */
 
 public class HelpScreen extends AppCompatActivity {
-
     ScrollView sv1, sv2, sv3, sv4;
     TextView headline1, headline2, headline3, headline4, headline5, answ1, answ2, answ3, answ4, answ5;
-    Button buttonback;
+    Button buttonback; // Zurückbutton
 
+    /**
+     * Methode onCreate, wird beim Erstellen aufgerugen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,9 @@ public class HelpScreen extends AppCompatActivity {
         });
     }
 
+    /**
+     * Konstruktor
+     */
     public void init(){
     }
 

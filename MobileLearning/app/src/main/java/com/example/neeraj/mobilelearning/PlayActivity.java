@@ -10,9 +10,11 @@ import android.widget.Button;
  * In dieser Klasse wirden alle Buttons mit jeweiliger Activity verlinkt.
  */
 public class PlayActivity extends AppCompatActivity {
+    public Button wort2zahl,wort2zahltxt,markezuzahl,settings,perlezuzahl,help; // Bedienelemente
 
-    public Button wort2zahl,wort2zahltxt,markezuzahl,settings,perlezuzahl,help;
-
+    /**
+     * Konstruktor
+     */
     public void init(){
         // Button, welcher für das Spiel Wort2Zahl zustädig ist.
         wort2zahl = (Button)findViewById(R.id.word_to_num);
@@ -85,6 +87,4 @@ public class PlayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
         init();
     }
-
-
 }

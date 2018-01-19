@@ -18,12 +18,8 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-
-
-
         Thread background = new Thread() {
             public void run() {
-
                 try {
                     // Thread will sleep for 3 seconds
                     sleep(3*1000);
@@ -32,23 +28,22 @@ public class SplashScreen extends Activity {
                     Intent i=new Intent(getBaseContext(),PlayActivity.class);
                     startActivity(i);
 
-                    //Remove activity
+                    // Remove activity
                     finish();
 
                 } catch (Exception e) {
-
+                    // Error
                 }
-
             }
         };
         background.start();
     }
 
-
+    /**
+     * Methode onDestroy, beim Schließen
+     */
     @Override
     protected void onDestroy() {
-
         super.onDestroy();
-
     }
 }

@@ -14,18 +14,19 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 /**
- * Diese Klasse soll für die Einstellungen zustädig sein.
+ * Diese Klasse soll für die Einstellungen zuständig sein.
  */
 public class Settings extends AppCompatActivity {
-    /*Spinner dropdownStart;
-    Spinner dropdownEnd;
-    String[] items;*/
     private SeekBar seekBar;
     private TextView numAuswahl;
-    public static int range = 100;
-    public Button buttonback;
+    public static int range = 100; // Default range
+    public Button buttonback; // Zurückbutton
     public static final int MIN = 1;
 
+    /**
+     * Methode onCreate, wird beim Erstellen aufgerufen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,21 +39,18 @@ public class Settings extends AppCompatActivity {
         seekBar.setProgress(10);
         range = seekBar.getProgress();
 
-
         numAuswahl.setText("0 - " + seekBar.getProgress());//.getMax());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress1 = 0;
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
                 int step = 10;
                 progress = ((int) Math.round(progress / step)) * step;
                 progress1 = progress;
                 numAuswahl.setText("0 - " + progress1);
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
-
             }
 
             @Override
@@ -62,7 +60,6 @@ public class Settings extends AppCompatActivity {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
                 numAuswahl.setText("0 - " + progress1);//""+ progress1 + " - " + seekBar.getMax());
                 Toast.makeText(getApplicationContext(), "", Toast.LENGTH_SHORT);
                 range = progress1;
@@ -78,22 +75,12 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
-        /*
-        this.dropdownStart = (Spinner) findViewById(R.id.spinnerStart);
-        this.dropdownEnd = (Spinner) findViewById(R.id.spinnerEnd);
-        for(int i = 0; i < 1000; i++) {
-            this.items = new String[i];
-        }*/
-
 
     /**
      * In dieser Methode sind die clickListener, die für den Play Button sowie für die Seekbar verantwortlich sind, definiert.
      */
-
-
     public void init() {
         //TextVIew für das Anzeigen von Zahlenbereich
-
     }
 }
 

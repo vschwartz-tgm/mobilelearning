@@ -19,7 +19,6 @@ import java.util.*;
 
 public class Speech extends AppCompatActivity implements TextToSpeech.OnInitListener {
     TextToSpeech engine;
-    int result;
     Random rand;
     int answ1;
     String[] ans;
@@ -103,7 +102,6 @@ public class Speech extends AppCompatActivity implements TextToSpeech.OnInitList
 
     }
 
-
     public void setText(Button btn, View v){
         if (btn.getText().toString() == Integer.toString(answ1)) {
             t1.setText("Score: " + score);
@@ -167,8 +165,6 @@ public class Speech extends AppCompatActivity implements TextToSpeech.OnInitList
      * Score - Methode
      */
     public void ergeb() {
-
-
     }
 
     @Override

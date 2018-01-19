@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
      * In dieser Methode sind die clickListener, die für den Play Button sowie für die Seekbar verantwortlich sind, definiert.
      */
     public void init(){
-
         play_btn = (ImageButton)findViewById(R.id.play_button);
         play_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         numAuswahl.setText(""+ seekBar.getProgress() + " - " + seekBar.getProgress());//.getMax());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progress1 = 0;
+
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int schritt = 10;

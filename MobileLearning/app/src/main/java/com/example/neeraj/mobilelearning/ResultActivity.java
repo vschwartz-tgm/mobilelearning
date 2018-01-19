@@ -11,6 +11,10 @@ import android.widget.TextView;
  */
 public class ResultActivity extends Activity {
 
+    /**
+     * Methode onCreate, wird beim Erstellen aufgerufen
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,10 @@ public class ResultActivity extends Activity {
 
     }
 
+    /**
+     * Methode playagain, führt das Spiel nochmals aus
+     * @param o
+     */
     public void playagain(View o) {
         Intent intent = new Intent(this, Wort2Zahl.class);
         startActivity(intent);
