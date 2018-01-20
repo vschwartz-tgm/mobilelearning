@@ -170,7 +170,7 @@ public class wort2ZahlText extends AppCompatActivity implements TextToSpeech.OnI
             public void onClick(View v) {
                 String textnum = zahl_eingabe.getText().toString();
                 System.out.print(textnum);
-                if(textnum=="") {
+                if(textnum.equals("")) {
                     zahl_wort.setText("Zahl eingeben");
                 }else{
                     int num = Integer.parseInt(textnum);
